@@ -15,3 +15,4 @@ https://github.com/apache/spark/tree/master/sql/core/src/main/scala/org/apache/s
 https://blog.nuna.com/user-query-monitoring-in-spark-c2156dd6d611
 
 spark.eventLog.enabled spark.eventLog.dir
+https://github.com/datamechanics/delight/tree/main/agent/src/main/scala/co/datamechanics/delight
