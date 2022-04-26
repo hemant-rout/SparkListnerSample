@@ -13,3 +13,5 @@ https://github.com/apache/spark/blob/master/sql/core/src/main/scala/org/apache/s
 https://github.com/apache/spark/tree/master/sql/core/src/main/scala/org/apache/spark/sql/execution/ui
 
 https://blog.nuna.com/user-query-monitoring-in-spark-c2156dd6d611
+
+spark.eventLog.enabled spark.eventLog.dir
