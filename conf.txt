@@ -1,0 +1,1005 @@
+(function(e) {
+    function t(t) {
+        for (var o, s, n = t[0], l = t[1], u = t[2], m = 0, p = []; m < n.length; m++) s = n[m], Object.prototype.hasOwnProperty.call(a, s) && a[s] && p.push(a[s][0]), a[s] = 0;
+        for (o in l) Object.prototype.hasOwnProperty.call(l, o) && (e[o] = l[o]);
+        c && c(t);
+        while (p.length) p.shift()();
+        return i.push.apply(i, u || []), r()
+    }
+
+    function r() {
+        for (var e, t = 0; t < i.length; t++) {
+            for (var r = i[t], o = !0, n = 1; n < r.length; n++) {
+                var l = r[n];
+                0 !== a[l] && (o = !1)
+            }
+            o && (i.splice(t--, 1), e = s(s.s = r[0]))
+        }
+        return e
+    }
+    var o = {},
+        a = {
+            app: 0
+        },
+        i = [];
+
+    function s(t) {
+        if (o[t]) return o[t].exports;
+        var r = o[t] = {
+            i: t,
+            l: !1,
+            exports: {}
+        };
+        return e[t].call(r.exports, r, r.exports, s), r.l = !0, r.exports
+    }
+    s.m = e, s.c = o, s.d = function(e, t, r) {
+        s.o(e, t) || Object.defineProperty(e, t, {
+            enumerable: !0,
+            get: r
+        })
+    }, s.r = function(e) {
+        "undefined" !== typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+            value: "Module"
+        }), Object.defineProperty(e, "__esModule", {
+            value: !0
+        })
+    }, s.t = function(e, t) {
+        if (1 & t && (e = s(e)), 8 & t) return e;
+        if (4 & t && "object" === typeof e && e && e.__esModule) return e;
+        var r = Object.create(null);
+        if (s.r(r), Object.defineProperty(r, "default", {
+                enumerable: !0,
+                value: e
+            }), 2 & t && "string" != typeof e)
+            for (var o in e) s.d(r, o, function(t) {
+                return e[t]
+            }.bind(null, o));
+        return r
+    }, s.n = function(e) {
+        var t = e && e.__esModule ? function() {
+            return e["default"]
+        } : function() {
+            return e
+        };
+        return s.d(t, "a", t), t
+    }, s.o = function(e, t) {
+        return Object.prototype.hasOwnProperty.call(e, t)
+    }, s.p = "/";
+    var n = window["webpackJsonp"] = window["webpackJsonp"] || [],
+        l = n.push.bind(n);
+    n.push = t, n = n.slice();
+    for (var u = 0; u < n.length; u++) t(n[u]);
+    var c = l;
+    i.push([0, "chunk-vendors"]), r()
+})({
+    0: function(e, t, r) {
+        e.exports = r("cd49")
+    },
+    "0fb9": function(e, t, r) {
+        "use strict";
+        r("251b")
+    },
+    "251b": function(e, t, r) {},
+    "47c9": function(e, t, r) {},
+    "5c0b": function(e, t, r) {
+        "use strict";
+        r("9c0c")
+    },
+    "70f7": function(e, t, r) {
+        "use strict";
+        r("47c9")
+    },
+    "9c0c": function(e, t, r) {},
+    cd49: function(e, t, r) {
+        "use strict";
+        r.r(t);
+        r("e260"), r("e6cf"), r("cca6"), r("a79d");
+        var o = r("2b0e"),
+            a = r("1dce"),
+            i = r.n(a),
+            s = function() {
+                var e = this,
+                    t = e.$createElement,
+                    r = e._self._c || t;
+                return r("div", {
+                    staticClass: "main-form__item"
+                }, [r("label", {
+                    attrs: {
+                        for: e.fieldName
+                    }
+                }, [e.tooltipText ? r("Tooltip", {
+                    attrs: {
+                        tooltipText: e.tooltipText
+                    }
+                }, [e._v(e._s(e.label))]) : r("span", [e._v(" " + e._s(e.label) + " ")]), e.model.$invalid ? r("span", {
+                    staticClass: "error-message"
+                }, [e._v(" " + e._s(e.parseError(e.model, e.errorText)) + " ")]) : e._e()], 1), e.valueTooltipText ? r("Tooltip", {
+                    attrs: {
+                        tooltipText: e.valueTooltipText
+                    }
+                }, [r("input", {
+                    directives: [{
+                        name: "model",
+                        rawName: "v-model.number",
+                        value: e.model.$model,
+                        expression: "model.$model",
+                        modifiers: {
+                            number: !0
+                        }
+                    }],
+                    class: {
+                        "input-error": e.model.$invalid
+                    },
+                    attrs: {
+                        type: "number",
+                        id: e.fieldName
+                    },
+                    domProps: {
+                        value: e.model.$model
+                    },
+                    on: {
+                        input: function(t) {
+                            t.target.composing || e.$set(e.model, "$model", e._n(t.target.value))
+                        },
+                        blur: function(t) {
+                            return e.$forceUpdate()
+                        }
+                    }
+                })]) : r("input", {
+                    directives: [{
+                        name: "model",
+                        rawName: "v-model.number",
+                        value: e.model.$model,
+                        expression: "model.$model",
+                        modifiers: {
+                            number: !0
+                        }
+                    }],
+                    class: {
+                        "input-error": e.model.$invalid
+                    },
+                    attrs: {
+                        type: "number",
+                        id: e.fieldName
+                    },
+                    domProps: {
+                        value: e.model.$model
+                    },
+                    on: {
+                        input: function(t) {
+                            t.target.composing || e.$set(e.model, "$model", e._n(t.target.value))
+                        },
+                        blur: function(t) {
+                            return e.$forceUpdate()
+                        }
+                    }
+                })], 1)
+            },
+            n = [],
+            l = r("9ab4"),
+            u = r("60a3"),
+            c = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return Object(l["b"])(t, e), t.prototype.parseError = function(e, t) {
+                    var r = "";
+                    return e && e.$invalid && (!1 === e.required && (r = "please, provide a value"), !1 === e.minValue && (r = "minimum value for this field is " + e.$params.minValue.min), !1 === e.maxValue && (r = "maximum value for this field is " + e.$params.maxValue.max), t && (r += ", " + t)), r
+                }, Object(l["a"])([Object(u["b"])()], t.prototype, "model", void 0), Object(l["a"])([Object(u["b"])({
+                    default: ""
+                })], t.prototype, "label", void 0), Object(l["a"])([Object(u["b"])()], t.prototype, "errorText", void 0), Object(l["a"])([Object(u["b"])()], t.prototype, "tooltipText", void 0), Object(l["a"])([Object(u["b"])()], t.prototype, "valueTooltipText", void 0), Object(l["a"])([Object(u["b"])()], t.prototype, "fieldName", void 0), t = Object(l["a"])([u["a"]], t), t
+            }(u["c"]),
+            m = c,
+            p = m,
+            d = r("2877"),
+            f = Object(d["a"])(p, s, n, !1, null, null, null),
+            h = f.exports,
+            v = function() {
+                var e = this,
+                    t = e.$createElement,
+                    r = e._self._c || t;
+                return r("div", {
+                    staticClass: "tooltip"
+                }, [e._t("default"), r("span", {
+                    class: ["tooltiptext", e.screenSize]
+                }, [e._v(" " + e._s(e.tooltipText) + " ")])], 2)
+            },
+            b = [],
+            y = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return Object(l["b"])(t, e), Object.defineProperty(t.prototype, "screenSize", {
+                    get: function() {
+                        return window.screen.width < 800 ? "top" : this.position
+                    },
+                    enumerable: !1,
+                    configurable: !0
+                }), Object(l["a"])([Object(u["b"])({
+                    default: ""
+                })], t.prototype, "tooltipText", void 0), Object(l["a"])([Object(u["b"])({
+                    default: "top"
+                })], t.prototype, "position", void 0), t = Object(l["a"])([u["a"]], t), t
+            }(u["c"]),
+            x = y,
+            g = x,
+            C = (r("0fb9"), Object(d["a"])(g, v, b, !1, null, null, null)),
+            O = C.exports,
+            k = function() {
+                var e = this,
+                    t = e.$createElement,
+                    r = e._self._c || t;
+                return r("div", {
+                    staticClass: "main-form__item"
+                }, [r("label", {
+                    attrs: {
+                        for: e.fieldName
+                    }
+                }, [e.tooltipText ? r("Tooltip", {
+                    attrs: {
+                        tooltipText: e.tooltipText
+                    }
+                }, [e._v(e._s(e.label))]) : r("span", [e._v(" " + e._s(e.label) + " ")])], 1), e.valueTooltipText ? r("Tooltip", {
+                    attrs: {
+                        tooltipText: e.valueTooltipText,
+                        position: e.position
+                    }
+                }, [e._v(" " + e._s(e.model) + " ")]) : r("span", [e._v(" " + e._s(e.model) + " ")])], 1)
+            },
+            T = [],
+            M = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return Object(l["b"])(t, e), Object.defineProperty(t.prototype, "position", {
+                    get: function() {
+                        return window.screen.width < 550 ? "left" : "top"
+                    },
+                    enumerable: !1,
+                    configurable: !0
+                }), Object(l["a"])([Object(u["b"])({
+                    default: ""
+                })], t.prototype, "model", void 0), Object(l["a"])([Object(u["b"])({
+                    default: ""
+                })], t.prototype, "label", void 0), Object(l["a"])([Object(u["b"])()], t.prototype, "tooltipText", void 0), Object(l["a"])([Object(u["b"])()], t.prototype, "valueTooltipText", void 0), Object(l["a"])([Object(u["b"])()], t.prototype, "fieldName", void 0), t = Object(l["a"])([u["a"]], t), t
+            }(u["c"]),
+            P = M,
+            N = P,
+            j = Object(d["a"])(N, k, T, !1, null, null, null),
+            _ = j.exports,
+            R = function() {
+                var e = this,
+                    t = e.$createElement,
+                    r = e._self._c || t;
+                return r("div", {
+                    staticClass: "main-form"
+                }, [r("div", {
+                    staticClass: "copy-container"
+                }, [e.headingTooltipText ? r("Tooltip", {
+                    attrs: {
+                        tooltipText: e.headingTooltipText,
+                        position: e.headingTooltipPosition
+                    }
+                }, [r("h4", [e._v(e._s(e.heading))])]) : r("h4", [e._v(e._s(e.heading))]), e.canCopy ? r("div", {
+                    staticClass: "copy",
+                    attrs: {
+                        title: "copy config"
+                    },
+                    on: {
+                        click: e.copyToBuffer
+                    }
+                }) : e._e()], 1), e._l(e.formConfig, (function(t) {
+                    return ["plain-text" == t.type ? r("TextLine", {
+                        key: t.fieldName,
+                        attrs: {
+                            label: t.label,
+                            model: e.formData ? "object" === typeof e.formData[t.fieldName] ? e.formData[t.fieldName].$model : e.formData[t.fieldName] : t.value,
+                            tooltipText: t.tooltipText,
+                            valueTooltipText: t.valueTooltipText,
+                            fieldName: t.fieldName
+                        }
+                    }) : e._e(), "number-input" == t.type ? r("NumberInput", {
+                        key: t.fieldName,
+                        attrs: {
+                            label: t.label,
+                            model: e.formData[t.fieldName],
+                            tooltipText: t.tooltipText,
+                            valueTooltipText: t.valueTooltipText,
+                            fieldName: t.fieldName
+                        }
+                    }) : e._e()]
+                }))], 2)
+            },
+            w = [],
+            A = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return Object(l["b"])(t, e), Object(l["a"])([Object(u["b"])()], t.prototype, "formConfig", void 0), Object(l["a"])([Object(u["b"])()], t.prototype, "formData", void 0), Object(l["a"])([Object(u["b"])()], t.prototype, "heading", void 0), Object(l["a"])([Object(u["b"])()], t.prototype, "headingTooltipText", void 0), Object(l["a"])([Object(u["b"])({
+                    default: "top"
+                })], t.prototype, "headingTooltipPosition", void 0), Object(l["a"])([Object(u["b"])({
+                    default: !1
+                })], t.prototype, "canCopy", void 0), Object(l["a"])([Object(u["b"])()], t.prototype, "copyToBuffer", void 0), t = Object(l["a"])([Object(u["a"])({
+                    mixins: [a["validationMixin"]]
+                })], t), t
+            }(u["c"]),
+            E = A,
+            S = E,
+            z = Object(d["a"])(S, R, w, !1, null, null, null),
+            D = z.exports,
+            I = function() {
+                var e = this,
+                    t = e.$createElement;
+                e._self._c;
+                return e._m(0)
+            },
+            V = [function() {
+                var e = this,
+                    t = e.$createElement,
+                    r = e._self._c || t;
+                return r("footer", {
+                    staticClass: "app-footer"
+                }, [r("div", [e._v(" Â© Copyright "), r("a", {
+                    attrs: {
+                        href: "https://luminousmen.com/"
+                    }
+                }, [e._v("luminousmen.com")]), e._v(" All Rights Reserved ")]), r("div", [e._v(" made by "), r("a", {
+                    attrs: {
+                        href: "https://www.linkedin.com/in/katekrivets"
+                    }
+                }, [e._v("katekrivets")])])])
+            }],
+            G = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return Object(l["b"])(t, e), t = Object(l["a"])([u["a"]], t), t
+            }(u["c"]),
+            X = G,
+            $ = X,
+            q = Object(d["a"])($, I, V, !1, null, null, null),
+            F = q.exports,
+            B = function() {
+                var e = this,
+                    t = e.$createElement,
+                    r = e._self._c || t;
+                return r("div", {
+                    attrs: {
+                        id: "app"
+                    }
+                }, [r("div", {
+                    staticClass: "app-container"
+                }, [r("div", {
+                    staticClass: "form-container"
+                }, [r("h2", [e._v("SPARK CONFIGURATION OPTIMIZATION")]), r("form", {
+                    on: {
+                        submit: function(t) {
+                            return t.preventDefault(), e.calculate(t)
+                        }
+                    }
+                }, [r("div", {
+                    staticClass: "cluster-params-form"
+                }, [r("div", {
+                    staticClass: "main-form__container"
+                }, [r("Form", {
+                    attrs: {
+                        heading: "CLUSTER SIZE",
+                        formConfig: e.clusterSizeParamsList,
+                        formData: e.$v.clusterParams
+                    }
+                })], 1), r("div", {
+                    staticClass: "main-form__container"
+                }, [r("Form", {
+                    attrs: {
+                        heading: "Additional params",
+                        formConfig: e.additionalParamsList,
+                        formData: e.$v.clusterParams,
+                        headingTooltipText: e.additionalParamsTooltip,
+                        headingTooltipPosition: "bottom"
+                    }
+                })], 1)]), r("div", {
+                    staticClass: "app-container-row"
+                }, [r("div", {
+                    staticClass: "app-container-column"
+                }, [r("Form", {
+                    attrs: {
+                        heading: "Calculated cluster resources",
+                        formConfig: e.clusterResourcesList,
+                        formData: e.clusterResources
+                    }
+                }), r("div", {
+                    style: "background: #" + e.calcColor
+                }, [r("Form", {
+                    attrs: {
+                        heading: "Unused resources",
+                        formConfig: e.unusedResourcesList,
+                        formData: e.unusedResources
+                    }
+                })], 1)], 1), r("Form", {
+                    attrs: {
+                        heading: "spark-defaults.conf",
+                        formConfig: e.sparkConfigList,
+                        formData: e.$v.sparkConfig,
+                        canCopy: !0,
+                        copyToBuffer: function() {
+                            return e.copyConfig(e.sparkConfig)
+                        }
+                    }
+                })], 1), r("div", {
+                    staticClass: "main-form__row"
+                }, [r("button", {
+                    attrs: {
+                        disabled: e.isInvalid
+                    }
+                }, [e._v("CALCULATE")])]), e.formattedCommand ? r("div", {
+                    staticClass: "app-formatted-command"
+                }, [r("div", {
+                    staticClass: "copy",
+                    on: {
+                        click: e.copyCommand
+                    }
+                }), r("div", {
+                    staticClass: "toggle-btn"
+                }, [r("div", {
+                    class: [e.sparkSubmitActive ? "active" : "", "btn"],
+                    on: {
+                        click: function() {
+                            return e.toggleCommand("spark-submit")
+                        }
+                    }
+                }, [e._v("spark-submit")]), r("div", {
+                    class: [e.sparkSubmitActive ? "" : "active", "btn"],
+                    on: {
+                        click: function() {
+                            return e.toggleCommand("amazon")
+                        }
+                    }
+                }, [e._v("aws")])]), r("textarea", {
+                    directives: [{
+                        name: "model",
+                        rawName: "v-model",
+                        value: e.formattedCommand,
+                        expression: "formattedCommand"
+                    }],
+                    attrs: {
+                        name: "formattedCommand",
+                        id: "formattedCommand",
+                        rows: "4"
+                    },
+                    domProps: {
+                        value: e.formattedCommand
+                    },
+                    on: {
+                        input: function(t) {
+                            t.target.composing || (e.formattedCommand = t.target.value)
+                        }
+                    }
+                })]) : e._e()]), r("div", {
+                    staticClass: "main-form--recommendations"
+                }, [r("Form", {
+                    attrs: {
+                        heading: "Recommended configuration",
+                        formConfig: e.recommendedConfiguration,
+                        headingTooltipText: e.recommendationHeadingTooltip,
+                        canCopy: !0,
+                        copyToBuffer: function() {
+                            return e.copyRecommendedConfig(e.recommendedConfiguration)
+                        }
+                    }
+                })], 1), r("BuyMeACoffee")], 1), r("Footer")], 1)])
+            },
+            H = [],
+            L = (r("4160"), r("4fad"), r("159b"), r("b5ae")),
+            U = function() {
+                function e(e, t, r, o, a) {
+                    void 0 === e && (e = 5), void 0 === t && (t = 16), void 0 === r && (r = 32), void 0 === o && (o = 2), void 0 === a && (a = 10), this.numberOfNodes = e, this.numberOfCores = t, this.memoryPerNode = r, this.parallelismPerCore = o, this.memoryOverhead = a
+                }
+                return e
+            }(),
+            J = U,
+            W = function() {
+                function e(e, t, r, o, a, i) {
+                    void 0 === e && (e = 0), void 0 === t && (t = 0), void 0 === r && (r = 0), void 0 === o && (o = 0), void 0 === a && (a = 0), void 0 === i && (i = 0), this.totalMem = e, this.overheadMemory = t, this.availableCores = r, this.availableMemory = o, this.numberOfExecutorsPerNode = a, this.totalMemPerExecutor = i
+                }
+                return e
+            }(),
+            Y = W,
+            K = function() {
+                function e(e, t, r, o, a, i, s, n, l, u, c) {
+                    void 0 === e && (e = 0), void 0 === t && (t = 0), void 0 === r && (r = 0), void 0 === o && (o = 1), void 0 === a && (a = 5), void 0 === i && (i = 0), void 0 === s && (s = 0), void 0 === n && (n = 0), void 0 === l && (l = 0), void 0 === u && (u = !1), void 0 === c && (c = !0), this.defaultParallelism = e, this.executorMemory = t, this.executorInstances = r, this.driverCores = o, this.executorCores = a, this.driverMemory = i, this.driverMaxResultSize = s, this.driverMemoryOverhead = n, this.executorMemoryOverhead = l, this.dynamicAllocation = u, this.adaptiveQuery = c
+                }
+                return e
+            }(),
+            Q = K,
+            Z = {
+                defaultParallelism: "spark.default.parallelism",
+                executorMemory: "spark.executor.memory",
+                executorInstances: "spark.executor.instances",
+                driverCores: "spark.driver.cores",
+                executorCores: "spark.executor.cores",
+                driverMemory: "spark.driver.memory",
+                driverMaxResultSize: "spark.driver.maxResultSize",
+                driverMemoryOverhead: "spark.driver.memoryOverhead",
+                executorMemoryOverhead: "spark.executor.memoryOverhead",
+                dynamicAllocation: "spark.dynamicAllocation.enabled",
+                adaptiveQuery: "spark.sql.adaptive.enabled"
+            },
+            ee = {
+                defaultParallelism: "",
+                executorMemory: "g",
+                executorInstances: "",
+                driverCores: "",
+                executorCores: "",
+                driverMemory: "g",
+                driverMaxResultSize: "g",
+                driverMemoryOverhead: "m",
+                executorMemoryOverhead: "m",
+                dynamicAllocation: "",
+                adaptiveQuery: ""
+            },
+            te = function() {
+                function e(e, t) {
+                    void 0 === e && (e = 0), void 0 === t && (t = 0), this.unusedMemoryPerNode = e, this.unusedCoresPerNode = t
+                }
+                return e
+            }(),
+            re = te,
+            oe = function() {
+                function e(e, t, r, o) {
+                    this.MEMORY_OVERHEAD_MIN = 384, this.clusterParams = e, this.clusterResources = t, this.sparkConfig = r, this.unusedResources = o
+                }
+                return e.prototype.calculate = function() {
+                    this.calculateClusterResources(), this.calculateSparkDefaultConfig(), this.calculateUnusedResources();
+                    var e = this,
+                        t = e.clusterParams,
+                        r = e.clusterResources,
+                        o = e.sparkConfig,
+                        a = e.unusedResources;
+                    return {
+                        clusterParams: t,
+                        clusterResources: r,
+                        sparkConfig: o,
+                        unusedResources: a
+                    }
+                }, e.prototype.calculateClusterResources = function() {
+                    this.calculateTotalMem(), this.calculateOverHeadMemory(), this.calculateAvailableCores(), this.calculateAvailableMemory(), this.calculateNumberOfExecutorsPerNode(), this.calculateTotalMemPerExecutor()
+                }, e.prototype.calculateTotalMem = function() {
+                    var e = this.clusterParams,
+                        t = e.memoryPerNode,
+                        r = e.numberOfNodes;
+                    this.clusterResources.totalMem = t * r
+                }, e.prototype.calculateOverHeadMemory = function() {
+                    var e = this.clusterResources.totalMem,
+                        t = this.clusterParams.memoryOverhead;
+                    this.clusterResources.overheadMemory = Math.round(Math.max(e * (t / 100) * 1024, this.MEMORY_OVERHEAD_MIN) / 1024)
+                }, e.prototype.calculateAvailableCores = function() {
+                    var e = this.clusterParams,
+                        t = e.numberOfCores,
+                        r = e.numberOfNodes;
+                    this.clusterResources.availableCores = (t - 1) * r
+                }, e.prototype.calculateAvailableMemory = function() {
+                    var e = this.clusterResources,
+                        t = e.totalMem,
+                        r = e.overheadMemory;
+                    this.clusterResources.availableMemory = Math.ceil(t - r)
+                }, e.prototype.calculateNumberOfExecutorsPerNode = function() {
+                    var e = this.clusterParams.numberOfCores,
+                        t = this.sparkConfig.executorCores;
+                    this.clusterResources.numberOfExecutorsPerNode = Math.floor((e - 1) / t)
+                }, e.prototype.calculateTotalMemPerExecutor = function() {
+                    var e = this.clusterParams.memoryPerNode,
+                        t = this.clusterResources.numberOfExecutorsPerNode;
+                    this.clusterResources.totalMemPerExecutor = Math.floor((e - 1) / t)
+                }, e.prototype.calculateSparkDefaultConfig = function() {
+                    this.calculateDriverCores(), this.calculateSparkExecutorMemory(), this.calculateExecutorInstances(), this.calculateDefaultParallelism(), this.calculateDriverMemory(), this.calculateDriverMaxResultSize(), this.calculateDriverMemoryOverHead(), this.calculateExecutorMemoryOverHead()
+                }, e.prototype.calculateSparkExecutorMemory = function() {
+                    var e = this.clusterParams.memoryOverhead,
+                        t = this.clusterResources.totalMemPerExecutor;
+                    this.sparkConfig.executorMemory = Math.max(Math.floor(t * (1 - e / 100)), 1)
+                }, e.prototype.calculateExecutorInstances = function() {
+                    var e = this.clusterParams.numberOfNodes,
+                        t = this.clusterResources.numberOfExecutorsPerNode,
+                        r = t * e - 1;
+                    this.sparkConfig.executorInstances = r < 1 ? 1 : r
+                }, e.prototype.calculateDefaultParallelism = function() {
+                    var e = this.sparkConfig,
+                        t = e.executorCores,
+                        r = e.executorInstances,
+                        o = this.clusterParams.parallelismPerCore;
+                    this.sparkConfig.defaultParallelism = Math.max(t * r * o, 2)
+                }, e.prototype.calculateDriverMemory = function() {
+                    this.sparkConfig.driverMemory = this.sparkConfig.executorMemory
+                }, e.prototype.calculateDriverMaxResultSize = function() {
+                    this.sparkConfig.driverMaxResultSize = this.sparkConfig.driverMemory
+                }, e.prototype.calculateDriverMemoryOverHead = function() {
+                    var e = this.sparkConfig.driverMemory,
+                        t = this.clusterParams.memoryOverhead;
+                    this.sparkConfig.driverMemoryOverhead = Math.max(Math.floor(e * t / 100 * 1024), this.MEMORY_OVERHEAD_MIN)
+                }, e.prototype.calculateExecutorMemoryOverHead = function() {
+                    var e = this.sparkConfig.executorMemory,
+                        t = this.clusterParams.memoryOverhead;
+                    this.sparkConfig.executorMemoryOverhead = Math.max(Math.floor(e * t / 100 * 1024), this.MEMORY_OVERHEAD_MIN)
+                }, e.prototype.calculateDriverCores = function() {
+                    this.sparkConfig.driverCores = this.sparkConfig.executorCores
+                }, e.prototype.calculateUnusedResources = function() {
+                    this.calculateUnusedMemoryPerNode(), this.calculateUnusedCoresPerNode()
+                }, e.prototype.calculateUnusedMemoryPerNode = function() {
+                    var e = this.clusterParams.memoryPerNode,
+                        t = this.sparkConfig.executorMemory,
+                        r = this.clusterResources.numberOfExecutorsPerNode;
+                    this.unusedResources.unusedMemoryPerNode = e - t * r
+                }, e.prototype.calculateUnusedCoresPerNode = function() {
+                    var e = this.clusterParams.numberOfCores,
+                        t = this.sparkConfig.executorCores,
+                        r = this.clusterResources.numberOfExecutorsPerNode;
+                    this.unusedResources.unusedCoresPerNode = e - r * t
+                }, e.prototype.getFormattedCommand = function() {
+                    return './bin/spark-submit --name "luminousmen app" --class <app class> --master yarn --deploy-mode cluster --num-executors ' + this.sparkConfig.executorInstances + " --executor-memory " + this.sparkConfig.executorMemory + "g --executor-cores " + this.sparkConfig.executorCores + " --driver-memory " + this.sparkConfig.driverMemory + "g --driver-cores " + this.sparkConfig.driverCores + " --conf spark.default.parallelism=" + this.sparkConfig.defaultParallelism + " --conf spark.driver.maxResultSize=" + this.sparkConfig.driverMaxResultSize + "g --conf spark.driver.memoryOverhead=" + this.sparkConfig.driverMemoryOverhead + "m --conf spark.executor.memoryOverhead=" + this.sparkConfig.executorMemoryOverhead + "m --conf spark.dynamicAllocation.enabled=false --conf spark.sql.adaptive.enabled=true <application jar>"
+                }, e.prototype.getFormattedCommandAmazon = function() {
+                    return '"Configurations":[\n    {\n        "Classification": "yarn-site",\n        "Properties": {\n        "yarn.nodemanager.vmem-check-enabled": "false",\n        "yarn.nodemanager.pmem-check-enabled": "false"\n        }\n    },\n    {\n        "Classification": "spark",\n        "Properties": {\n            "maximizeResourceAllocation": "false"\n        }\n    },\n    {\n        "Classification": "spark-defaults",\n        "Properties": {\n            "spark.dynamicAllocation.enabled": "false",\n            "spark.sql.adaptive.enabled": "true",\n            "spark.driver.memory": "' + this.sparkConfig.driverMemory + 'G",\n            "spark.executor.memory": "' + this.sparkConfig.executorMemory + 'G",\n            "spark.executor.cores": "' + this.sparkConfig.executorCores + '",\n            "spark.executor.instances": "' + this.sparkConfig.executorInstances + '",\n            "spark.executor.memoryOverhead": "' + this.sparkConfig.executorMemoryOverhead + 'M",\n            "spark.driver.memoryOverhead": "' + this.sparkConfig.driverMemoryOverhead + 'M",\n            "spark.memory.fraction": "0.80",\n            "spark.executor.extraJavaOptions": "-XX:+UseG1GC -XX:+UnlockDiagnosticVMOptions -XX:+G1SummarizeConcMark -XX:InitiatingHeapOccupancyPercent=35 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:OnOutOfMemoryError=\'kill -9 %p\'",\n            "spark.driver.extraJavaOptions": "-XX:+UseG1GC -XX:+UnlockDiagnosticVMOptions -XX:+G1SummarizeConcMark -XX:InitiatingHeapOccupancyPercent=35 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:OnOutOfMemoryError=\'kill -9 %p\'",\n            "spark.yarn.scheduler.reporterThread.maxFailures": "5",\n            "spark.storage.level": "MEMORY_AND_DISK_SER",\n            "spark.rdd.compress": "true",\n            "spark.shuffle.compress": "true",\n            "spark.shuffle.spill.compress": "true",\n            "spark.default.parallelism": "' + this.sparkConfig.defaultParallelism + '"\n        }\n    },\n    {\n        "Classification": "mapred-site",\n        "Properties": {\n            "mapreduce.map.output.compress": "true"\n        }\n    },\n    {\n        "Classification": "hadoop-env",\n        "Configurations": [{\n            "Classification": "export",\n            "Configurations": [],\n            "Properties": {\n                "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"\n            }\n        }],\n        "Properties": {}\n    },\n    {\n        "Classification": "spark-env",\n        "Configurations": [{\n            "Classification": "export",\n            "Properties": {\n                "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"\n            }\n        }],\n        "Properties": {}\n    }\n]'
+                }, e.prototype.calculateScore = function() {
+                    var e = this.unusedResources.unusedMemoryPerNode / this.clusterParams.memoryPerNode,
+                        t = this.unusedResources.unusedCoresPerNode / this.clusterParams.numberOfCores,
+                        r = (2 * t + e) / 3;
+                    return r
+                }, e
+            }(),
+            ae = oe,
+            ie = function(e) {
+                var t = document.createElement("textarea");
+                document.body.appendChild(t), t.setAttribute("id", "dummy_id"), document.querySelector("#dummy_id").value = e, t.select(), document.execCommand("copy"), document.body.removeChild(t)
+            },
+            se = [{
+                fieldName: "defaultParallelism",
+                label: "spark.default.parallelism",
+                type: "plain-text",
+                tooltipText: "Default number of partitions in RDDs. We recommend that you estimate the size of each partition and adjust this number accordingly using coalesce or repartition.",
+                valueTooltipText: "Total number of cores on all executor nodes times parallelism per core or 2, whichever is larger"
+            }, {
+                fieldName: "executorMemory",
+                label: "spark.executor.memory (GB)",
+                type: "plain-text",
+                tooltipText: "Amount of memory to use per executor process.",
+                valueTooltipText: "Node memory without the overhead memory."
+            }, {
+                fieldName: "executorInstances",
+                label: "spark.executor.instances",
+                type: "plain-text",
+                tooltipText: "Final number of executor instances.",
+                valueTooltipText: "Leaving 1 executor for ApplicationManager."
+            }, {
+                fieldName: "driverCores",
+                label: "spark.driver.cores",
+                type: "plain-text",
+                tooltipText: "Amount of memory to use for the driver process.",
+                valueTooltipText: "We recommend setting this to spark.executors.cores."
+            }, {
+                fieldName: "executorCores",
+                label: "spark.executor.cores",
+                type: "number-input",
+                tooltipText: "The number of cores to use on each executor.",
+                valueTooltipText: "Assigning executors with a large number of virtual cores leads to a low number of executors and reduced parallelism. Assigning a low number of virtual cores leads to a high number of executors, causing a larger amount of I/O operations. We suggest that you have 5 cores for each executor to achieve optimal results in any sized cluster."
+            }, {
+                fieldName: "driverMemory",
+                label: "spark.driver.memory (GB)",
+                type: "plain-text",
+                tooltipText: "Amount of memory to use for the driver process.",
+                valueTooltipText: "We recommend setting this to spark.executors.memory."
+            }, {
+                fieldName: "driverMaxResultSize",
+                label: "spark.driver.maxResultSize (GB)",
+                type: "plain-text",
+                tooltipText: "Limit of total size of serialized results of all partitions for each Spark action (e.g. collect).",
+                valueTooltipText: "Should be at least 1M, or 0 for unlimited. Jobs will be aborted if the total size is above this limit. Having a high limit may cause out-of-memory errors in driver (depends on spark.driver.memory and memory overhead of objects in JVM). Setting a proper limit can protect the driver from out-of-memory errors."
+            }, {
+                fieldName: "driverMemoryOverhead",
+                label: "spark.driver.memoryOverhead (MB)",
+                type: "plain-text",
+                tooltipText: "Amount of non-heap memory to be allocated per driver process in cluster mode, in MiB unless otherwise specified. This is memory that accounts for things like VM overheads, interned strings, other native overheads, etc. This tends to grow with the container size (typically 6-10%). This option is currently supported on YARN, Mesos and Kubernetes.",
+                valueTooltipText: "spark.driver.memory * 0.10, with minimum of 384"
+            }, {
+                fieldName: "executorMemoryOverhead",
+                label: "spark.executor.memoryOverhead (MB)",
+                type: "plain-text",
+                tooltipText: "Amount of additional memory to be allocated per executor process in cluster mode, in MiB unless otherwise specified. This is memory that accounts for things like VM overheads, interned strings, other native overheads, etc. This tends to grow with the executor size (typically 6-10%). This option is currently supported on YARN and Kubernetes.",
+                valueTooltipText: "Amount of additional memory to be allocated per executor process in cluster mode, in MiB unless otherwise specified. This is memory that accounts for things like VM overheads, interned strings, other native overheads, etc. This tends to grow with the executor size (typically 6-10%). This option is currently supported on YARN and Kubernetes."
+            }, {
+                fieldName: "dynamicAllocation",
+                label: "spark.dynamicAllocation.enabled",
+                type: "plain-text",
+                tooltipText: "Spark on YARN can dynamically scale the number of executors used for a Spark application based on the workloads. This is the configuration responsible for it.",
+                valueTooltipText: "Set spark.dynamicAllocation.enabled to true only if the numbers are properly determined for spark.dynamicAllocation.initialExecutors, minExecutors, maxExecutors. Otherwise we recommend to manually calculate the resources for the important jobs."
+            }, {
+                fieldName: "adaptiveQuery",
+                label: "spark.sql.adaptive.enabled",
+                type: "plain-text",
+                tooltipText: "Adaptive Query Execution is an optimization technique in Spark SQL that makes use of the runtime statistics to choose the most efficient query execution plan.",
+                valueTooltipText: "Adaptive Query Execution set to false by default in Spark 3.0. It applies if the query is not a streaming query and contains at least one exchange (usually when thereâ€™s a join, aggregate or window operator) or one subquery. We recommend set it to true."
+            }],
+            ne = [{
+                fieldName: "unusedMemoryPerNode",
+                label: "Unused memory per node",
+                type: "plain-text"
+            }, {
+                fieldName: "unusedCoresPerNode",
+                label: "Unused cores per node",
+                type: "plain-text"
+            }],
+            le = [{
+                fieldName: "spark.memory.fraction",
+                label: "spark.memory.fraction",
+                value: "0.8",
+                type: "plain-text",
+                tooltipText: "Fraction of JVM heap space used for Spark execution and storage.",
+                valueTooltipText: "The lower this is, the more frequently spills and cached data eviction occur."
+            }, {
+                fieldName: "spark.scheduler.barrier.maxConcurrentTasksCheck.maxFailures",
+                label: "spark.scheduler.barrier.maxConcurrentTasksCheck.maxFailures",
+                value: "5",
+                type: "plain-text",
+                tooltipText: "Maximum number executor failures allowed before YARN can fail the application."
+            }, {
+                fieldName: "spark.rdd.compress",
+                label: "spark.rdd.compress",
+                value: "true",
+                type: "plain-text",
+                tooltipText: "Whether to compress serialized RDD partitions",
+                valueTooltipText: "When set to true, this property can save substantial space at the cost of some extra CPU time by compressing the RDDs."
+            }, {
+                fieldName: "spark.shuffle.compress",
+                label: "spark.shuffle.compress",
+                value: "true",
+                type: "plain-text",
+                tooltipText: "Whether to compress the map output.",
+                valueTooltipText: "When set to true, this property compresses the map output to save space."
+            }, {
+                fieldName: "spark.shuffle.spill.compress",
+                label: "spark.shuffle.spill.compress",
+                value: "true",
+                type: "plain-text",
+                tooltipText: "Whether to compress the data spilled during shuffles.",
+                valueTooltipText: "When set to true, this property compresses the data spilled during shuffles."
+            }, {
+                fieldName: "spark.serializer",
+                label: "spark.serializer",
+                value: "org.apache.spark.serializer.KryoSerializer",
+                type: "plain-text",
+                tooltipText: "Class to use for serializing objects that will be sent over the network or need to be cached in serialized form.",
+                valueTooltipText: "The default of Java serialization works with any Serializable Java object but is quite slow, so we recommend using org.apache.spark.serializer.KryoSerializer and configuring Kryo serialization when speed is necessary."
+            }, {
+                fieldName: "spark.executor.extraJavaOptions",
+                label: "spark.executor.extraJavaOptions",
+                value: "-XX:+UseG1GC -XX:+G1SummarizeConcMark",
+                type: "plain-text",
+                tooltipText: "A string of extra JVM options to pass to executors.",
+                valueTooltipText: "You can use multiple garbage collectors to evict the old objects and place the new ones into the memory. However, the latest Garbage First Garbage Collector (G1GC) overcomes the latency and throughput limitations with the old garbage collectors."
+            }, {
+                fieldName: "spark.driver.extraJavaOptions",
+                label: "spark.driver.extraJavaOptions",
+                value: "-XX:+UseG1GC -XX:+G1SummarizeConcMark",
+                type: "plain-text",
+                tooltipText: "A string of extra JVM options to pass to the driver.",
+                valueTooltipText: "You can use multiple garbage collectors to evict the old objects and place the new ones into the memory. However, the latest Garbage First Garbage Collector (G1GC) overcomes the latency and throughput limitations with the old garbage collectors."
+            }],
+            ue = [{
+                fieldName: "totalMem",
+                label: "Total memory (GB)",
+                type: "plain-text",
+                tooltipText: "Total cluster memory."
+            }, {
+                fieldName: "overheadMemory",
+                label: "Total overhead memory (GB)",
+                type: "plain-text",
+                tooltipText: "Total overhead memory in the cluster."
+            }, {
+                fieldName: "availableCores",
+                label: "Total available cores",
+                type: "plain-text",
+                tooltipText: "Total cluster cores availible for node containers.",
+                valueTooltipText: "Leave 1 core per node for Hadoop/Yarn daemons."
+            }, {
+                fieldName: "availableMemory",
+                label: "Total available memory (GB)",
+                type: "plain-text",
+                tooltipText: "Total cluster memory availible for node containers."
+            }, {
+                fieldName: "numberOfExecutorsPerNode",
+                label: "Number of executors per node",
+                type: "plain-text",
+                valueTooltipText: "Number of executors per node = (total number of cores per node - 1) / spark.executors.cores"
+            }, {
+                fieldName: "totalMemPerExecutor",
+                label: "Memory per executor (GB)",
+                type: "plain-text",
+                tooltipText: "This total memory per executor includes the executor memory and overhead (spark.executor.memoryOverhead).",
+                valueTooltipText: "Leave 1 GB for the Hadoop daemons."
+            }],
+            ce = [{
+                fieldName: "numberOfNodes",
+                label: "Number of nodes *",
+                type: "number-input"
+            }, {
+                fieldName: "numberOfCores",
+                label: "Number of cores per node *",
+                type: "number-input"
+            }, {
+                fieldName: "memoryPerNode",
+                label: "Memory (RAM) per node (GB) *",
+                type: "number-input"
+            }],
+            me = [{
+                fieldName: "parallelismPerCore",
+                label: "Parallelism Per Core",
+                type: "number-input",
+                tooltipText: "The level of parallelism per allocated core. This field is used to determine the spark.default.parallelism configuration.",
+                valueTooltipText: "We recommend setting this value to 2. It can be higher for a large cluster."
+            }, {
+                fieldName: "memoryOverhead",
+                label: "Memory overhead (%)",
+                type: "number-input",
+                tooltipText: "The percentage of memory in each executor that will be reserved for spark.executor.memoryOverhead."
+            }],
+            pe = "The following parameters help to fine tune the overall optimized configuration. We recommend to leave them as defaults.",
+            de = "Though the following parameters are not required but they can help in running the applications smoothly to avoid timeout and memory-related errors. We advise that you set these in the spark-defaults configuration file.",
+            fe = (r("d3b7"), r("25f0"), function(e) {
+                var t = "e8ffe4",
+                    r = "ffe4e4",
+                    o = function(e) {
+                        var t = e.toString(16);
+                        return 1 === t.length ? "0" + t : t
+                    },
+                    a = Math.ceil(parseInt(r.substring(0, 2), 16) * e + parseInt(t.substring(0, 2), 16) * (1 - e)),
+                    i = Math.ceil(parseInt(r.substring(2, 4), 16) * e + parseInt(t.substring(2, 4), 16) * (1 - e)),
+                    s = Math.ceil(parseInt(r.substring(4, 6), 16) * e + parseInt(t.substring(4, 6), 16) * (1 - e));
+                return o(a) + o(i) + o(s)
+            }),
+            he = function() {
+                var e = this,
+                    t = e.$createElement;
+                e._self._c;
+                return e._m(0)
+            },
+            ve = [function() {
+                var e = this,
+                    t = e.$createElement,
+                    r = e._self._c || t;
+                return r("div", {
+                    staticClass: "buymecoffee"
+                }, [r("a", {
+                    attrs: {
+                        href: "https://www.buymeacoffee.com/OheL3Mfnp",
+                        target: "blank",
+                        title: "Support author"
+                    }
+                }, [r("img", {
+                    attrs: {
+                        src: "https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg",
+                        alt: ""
+                    }
+                }), e._v(" Buy me a coffee ")])])
+            }],
+            be = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return Object(l["b"])(t, e), t = Object(l["a"])([u["a"]], t), t
+            }(u["c"]),
+            ye = be,
+            xe = ye,
+            ge = (r("70f7"), Object(d["a"])(xe, he, ve, !1, null, "da99ad0c", null)),
+            Ce = ge.exports,
+            Oe = {
+                clusterParams: {
+                    numberOfNodes: {
+                        required: L["required"],
+                        minValue: Object(L["minValue"])(1)
+                    },
+                    numberOfCores: {
+                        required: L["required"],
+                        minValue: Object(L["minValue"])(3)
+                    },
+                    memoryPerNode: {
+                        required: L["required"],
+                        minValue: Object(L["minValue"])(2)
+                    },
+                    parallelismPerCore: {
+                        required: L["required"],
+                        minValue: Object(L["minValue"])(1)
+                    },
+                    memoryOverhead: {
+                        required: L["required"],
+                        maxValue: Object(L["maxValue"])(50)
+                    }
+                },
+                sparkConfig: {
+                    defaultParallelism: {},
+                    executorMemory: {},
+                    executorInstances: {},
+                    driverCores: {},
+                    executorCores: {
+                        required: L["required"],
+                        minValue: Object(L["minValue"])(1),
+                        maxValue: Object(L["maxValue"])(100)
+                    },
+                    driverMemory: {},
+                    driverMaxResultSize: {},
+                    driverMemoryOverhead: {},
+                    executorMemoryOverhead: {},
+                    dynamicAllocation: {},
+                    adaptiveQuery: {}
+                }
+            },
+            ke = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.clusterParams = new J, t.clusterResources = new Y, t.sparkConfig = new Q, t.unusedResources = new re, t.formattedCommand = "", t.score = 0, t.sparkSubmitActive = !0, t.additionalParamsList = me, t.additionalParamsTooltip = pe, t.clusterSizeParamsList = ce, t.clusterResourcesList = ue, t.unusedResourcesList = ne, t.sparkConfigList = se, t.recommendedConfiguration = le, t.recommendationHeadingTooltip = de, t
+                }
+                return Object(l["b"])(t, e), t.prototype.onNumberOfCoresChange = function(e) {
+                    Oe.sparkConfig.executorCores.maxValue = Object(L["maxValue"])(e - 1)
+                }, Object.defineProperty(t.prototype, "isInvalid", {
+                    get: function() {
+                        return this.$v.clusterParams.$invalid || this.$v.sparkConfig.$invalid
+                    },
+                    enumerable: !1,
+                    configurable: !0
+                }), t.prototype.mounted = function() {
+                    this.calculate(), Oe.sparkConfig.executorCores.maxValue = Object(L["maxValue"])(this.clusterParams.numberOfCores - 1)
+                }, Object.defineProperty(t.prototype, "numberOfCores", {
+                    get: function() {
+                        return this.clusterParams.numberOfCores
+                    },
+                    enumerable: !1,
+                    configurable: !0
+                }), t.prototype.calculate = function() {
+                    var e = new ae(this.clusterParams, this.clusterResources, this.sparkConfig, this.unusedResources);
+                    if (!this.isInvalid) {
+                        var t = e.calculate(),
+                            r = t.clusterResources,
+                            o = t.clusterParams,
+                            a = t.sparkConfig,
+                            i = t.unusedResources;
+                        this.sparkConfig = a, this.clusterResources = r, this.clusterParams = o, this.unusedResources = i, this.formattedCommand = e.getFormattedCommand()
+                    }
+                    this.score = e.calculateScore()
+                }, Object.defineProperty(t.prototype, "calcColor", {
+                    get: function() {
+                        return fe(this.score)
+                    },
+                    enumerable: !1,
+                    configurable: !0
+                }), t.prototype.copyCommand = function() {
+                    ie(this.formattedCommand)
+                }, t.prototype.toggleCommand = function(e) {
+                    var t = new ae(this.clusterParams, this.clusterResources, this.sparkConfig, this.unusedResources);
+                    this.sparkSubmitActive = !this.sparkSubmitActive, this.formattedCommand = "amazon" == e ? t.getFormattedCommandAmazon() : t.getFormattedCommand()
+                }, t.prototype.copyConfig = function(e) {
+                    var t = "";
+                    Object.entries(e).forEach((function(e) {
+                        t += Z[e[0]] + "\t" + (e[1] + ee[e[0]]) + "\n"
+                    })), ie(t)
+                }, t.prototype.copyRecommendedConfig = function(e) {
+                    var t = "";
+                    e.forEach((function(e) {
+                        t += e.fieldName + "\t" + e.value + "\n"
+                    })), ie(t)
+                }, Object(l["a"])([Object(u["d"])("clusterParams.numberOfCores")], t.prototype, "onNumberOfCoresChange", null), t = Object(l["a"])([Object(u["a"])({
+                    mixins: [a["validationMixin"]],
+                    validations: Oe,
+                    components: {
+                        BuyMeACoffee: Ce
+                    }
+                })], t), t
+            }(u["c"]),
+            Te = ke,
+            Me = Te,
+            Pe = (r("5c0b"), Object(d["a"])(Me, B, H, !1, null, null, null)),
+            Ne = Pe.exports;
+        o["a"].use(i.a), o["a"].component("NumberInput", h), o["a"].component("Tooltip", O), o["a"].component("TextLine", _), o["a"].component("Form", D), o["a"].component("Footer", F), o["a"].config.productionTip = !1, new o["a"]({
+            render: function(e) {
+                return e(Ne)
+            },
+            validations: {}
+        }).$mount("#app")
+    }
+});
+//# sourceMappingURL=app.ee99868c.js.map
